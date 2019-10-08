@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addTask">
+
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="title"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <EditText
+        android:id="@+id/edSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="subject"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <EditText
+        android:id="@+id/etpnionity"
+        android:layout_width="65dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="pnionity"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <SeekBar
+        android:id="@+id/seekB"
+        android:layout_width="205dp"
+        android:layout_height="47dp"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="398dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

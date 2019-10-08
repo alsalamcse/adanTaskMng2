@@ -1,10 +1,48 @@
 {
   "project_info": {
-    "project_number": "1060000806877",
-    "firebase_url": "https://adantaskmng2-77b60.firebaseio.com",
-    "project_id": "adantaskmng2-77b60",
-    "storage_bucket": "adantaskmng2-77b60.appspot.com"
+    "project_number": "715870433253",
+    "firebase_url": "https://adantaskmng2.firebaseio.com",
+    "project_id": "adantaskmng2",
+    "storage_bucket": "adantaskmng2.appspot.com"
   },
-  "client": [],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715870433253:android:7f56890c114d065ae8090c",
+        "android_client_info": {
+          "package_name": "adan.sholy.adantaskmng2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715870433253-rc8l803oraeidkq6ek9nd8b62njnuoa2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "adan.sholy.adantaskmng2",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "715870433253-9q0dj4qk85rakcpfea40mj70q07j3t7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC-P4aFm4e-C1EZwP_FIkmGkrJdWPNVR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715870433253-9q0dj4qk85rakcpfea40mj70q07j3t7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
   "configuration_version": "1"
 }
