@@ -9,7 +9,7 @@ import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class settings extends AppCompatActivity {
-    private EditText edtsound;
+    private EditText edtFort;
     private Switch switchOnOff;
     private SeekBar seekBar2;
     private Button btn1;
@@ -21,7 +21,7 @@ public class settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         switchOnOff=(Switch)findViewById(R.id.switchOnOff);
-        edtsound=(EditText) findViewById(R.id.edtsound);
+        edtFort=(EditText) findViewById(R.id.edtFort);
         seekBar2=(SeekBar) findViewById(R.id.seekBar2);
 
 

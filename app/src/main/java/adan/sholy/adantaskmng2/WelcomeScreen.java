@@ -5,7 +5,38 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class WelcomeScreen extends AppCompatActivity {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Thread th = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    sleep(3000);
+                    FirebaseAuth auth = FirebaseAuth.getInstance();
+
+                    if (auth.getCurrentUser() == null || auth.getCurrentUser().getEmail() == null) {
+                        Intent i = new Intent(getApplication(), Singin.class);
+                        startActivity(i);
+                        finish();
+                    } else {
+                        Intent i = new Intent(getApplication(),MainActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        th.start();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,17 +44,6 @@ public class WelcomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_screen);
 
 
-        Thread th = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    sleep(3000);
-                    Intent i=new Intent(getApplication(),SignInActivity.class);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
 
-            }
-        };
     }
 }
