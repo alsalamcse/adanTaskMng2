@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.dynamic.OnDelegateCreatedListener;
@@ -38,11 +39,11 @@ public class addTask extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                dataHandler();
+
            }
+
     }};
 }
-
-
        private void dataHandler()
        {
            String Title=edTitle.getText().toString();
@@ -52,7 +53,7 @@ public class addTask extends AppCompatActivity {
            boolean isOk=false;
            if (isOk)
            {
-               MyTask t = new MyTask();
+               MyTask t=new MyTask();
                t.setTitle(Title);
                t.setSubject(Subject);
 
@@ -60,27 +61,28 @@ public class addTask extends AppCompatActivity {
        }
        public void creatTask(MyTask t)
        {
-           FirebaseDatabase databas=FirebaseDatabase.getIntent();
-           DatabaseReference reference =database.getRefernce();
-           String key = reference.child("tasks").push().getkey();
-           reference.child("task").child(key).setValue(t).addOnCompleteListener(AddTask.this,new OnDelegateCreatedListener<void>())
-       {
+           FirebaseDatabase database=FirebaseDatabase.getInstance();
+           DatabaseReference reference =database.getReference();
+           String key = reference.child("tasks").push().getKey();
+           reference.child("task").child(key).setValue(t).addOnCompleteListener(addTask.this,new OnDelegateCreatedListener<void>()){
+
                @Override
 
-               public void onComplete(Task< void>task)
+               public void onComplete(@NonNull Task<void>task)
                {
                    if (task.isSuccesful()) {
-                       Toast.makeText(AddTask.this,text"add Succesful", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(addTask.this,"add Succesful", Toast.LENGTH_SHORT).show();
                        finish();
                    }
                    else
                        {
-                       Toast.makeText(AddTask.this,"add failed" +task.getExcption().getMassege(), Toast.LENGTH_SHORT).show();
+                       Toast.makeText(addTask.this,"add failed"+task.getExpection().getMessages(), Toast.LENGTH_SHORT).show();
+                       task.getExpection().printStackTrance();
                    }
                }
            }
        }};
-           private void createTask(String Title,int seekbar,int subject)
+           private void creatTask(String Title,String Subject,int Seekbar)
            {
 
            }
