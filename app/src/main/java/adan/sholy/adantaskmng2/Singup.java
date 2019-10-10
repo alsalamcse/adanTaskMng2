@@ -46,7 +46,9 @@ public class Singup extends AppCompatActivity {
         String firstname = this.phone.getText().toString();
         String lastname = this.firstname.getText().toString();
         String phone = this.lastname.getText().toString();
-        String password2;
+        String password2=this.password2.getText().toString();
+        String btnsave=this.btnsave.getText().toString();
+
         password2 = this.password2.getText().toString();
         if (email.length() < 4 ||
                 email.indexOf('@') < 0 ||

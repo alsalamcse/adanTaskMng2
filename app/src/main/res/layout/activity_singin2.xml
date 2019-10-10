@@ -6,47 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Singin">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="312dp"
-        android:layout_height="294dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="30dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
-
     <EditText
-        android:id="@+id/etAdd1"
+        android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="339dp" />
+        android:hint="repassword"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="281dp" />
 
     <Button
         android:id="@+id/sn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Singin"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="500dp" />
-
-    <EditText
-        android:id="@+id/etAdd2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="407dp" />
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="362dp" />
 
     <Button
         android:id="@+id/sp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Singup"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="576dp" />
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="183dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ public class Singin extends AppCompatActivity {
         sn1=(Button) findViewById(R.id.sn1);
         sp1=(Button) findViewById(R.id.sp1);
 
-    }
+    } tasle7 id
     private void dataHandler() {
         String email = etAdd1.getText().toString();
         String password = etAdd2.getText().toString();
