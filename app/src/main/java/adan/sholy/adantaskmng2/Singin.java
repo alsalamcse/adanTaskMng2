@@ -14,34 +14,36 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Singin extends AppCompatActivity {
-    private EditText etAdd1;
-    private EditText etAdd2;
-    private Button sn1;
-    private Button sp1;
+    private EditText editEmail;
+    private EditText editPassword;
+    private EditText editPasswor2;
+    private Button ButtonIn;
+    private Button ButtonUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singin2);
-        etAdd1=(EditText) findViewById(R.id.etAdd1);
-        etAdd2=(EditText) findViewById(R.id.etAdd2);
-        sn1=(Button) findViewById(R.id.sn1);
-        sp1=(Button) findViewById(R.id.sp1);
+        editEmail=(EditText) findViewById(R.id.editEmail);
+        editPassword=(EditText) findViewById(R.id.editPassword);
+        editPasswor2=(EditText)findViewById(R.id.editPassord2);
+        ButtonIn=(Button) findViewById(R.id.ButtonIn);
+        ButtonUp=(Button) findViewById(R.id.ButtonUp);
 
-    } tasle7 id
+    }
     private void dataHandler() {
-        String email = etAdd1.getText().toString();
-        String password = etAdd2.getText().toString();
+        String email =editEmail.getText().toString();
+        String password =editPassword.getText().toString();
         boolean isok = true;
         if(email.length()<4)
         {
-            etAdd2.setError("Email lenght error");
+           editPassword.setError("Email lenght error");
            isok=false;
 
         }
         if (email.indexOf("@")<0||email.indexOf(".")<0)
         {
-            etAdd2.setError("email worng format");
+            editPassword.setError("email worng format");
             isok=false;
         }
 //        if (isValidEmailAddress(email) == false)
@@ -51,7 +53,7 @@ public class Singin extends AppCompatActivity {
 //        }
         if (password.length() <8)
         {
-            etAdd1.setError(" min lenght8");
+            editEmail.setError(" min lenght8");
             isok = false;
         }
         if (isok)
@@ -67,7 +69,7 @@ public class Singin extends AppCompatActivity {
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
     }
-    private void signIn(String email,String password){
+    private <SinginActivity> void signIn(String email, String password){
         FirebaseAuth auth=FirebaseAuth.getInstance();
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -76,13 +78,13 @@ public class Singin extends AppCompatActivity {
 
                     {
                 //go to ,mail screen(all task activity)
-                        Intent intent=new Intent(SinginActivity.this,MainTasksActivity.class);
+                        Intent intent = new Intent(Singin.this,MainTasksActivity.class);
                         startActivity(intent);
 
             }
             else
             {
-                etAdd1.setError("email or password is wrong");
+               editEmail.setError("email or password is wrong");
             }
 
             }

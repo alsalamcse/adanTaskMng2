@@ -10,9 +10,9 @@
         android:id="@+id/switchOnOff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:text="switch"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="109dp" />
 
     <SeekBar
         android:id="@+id/seekBar2"
@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="257dp" />
 
     <Button
-        android:id="@+id/btnSave1"
+        android:id="@+id/btnSave"
         android:layout_width="86dp"
         android:layout_height="186dp"
         android:text="save"
@@ -30,7 +30,7 @@
         tools:layout_editor_absoluteY="389dp" />
 
     <EditText
-        android:id="@+id/edtFort"
+        android:id="@+id/editSize"
         android:layout_width="151dp"
         android:layout_height="0dp"
         android:ems="10"

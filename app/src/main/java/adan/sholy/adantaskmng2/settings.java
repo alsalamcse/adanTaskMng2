@@ -9,10 +9,10 @@ import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class settings extends AppCompatActivity {
-    private EditText edtFort;
     private Switch switchOnOff;
-    private SeekBar seekBar2;
-    private Button btn1;
+    private SeekBar seekB;
+    private Button btnSave;
+    private EditText editSize;
 
 
 
@@ -21,8 +21,9 @@ public class settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         switchOnOff=(Switch)findViewById(R.id.switchOnOff);
-        edtFort=(EditText) findViewById(R.id.edtFort);
-        seekBar2=(SeekBar) findViewById(R.id.seekBar2);
+        editSize=(EditText) findViewById(R.id.editSize);
+        seekB=(SeekBar) findViewById(R.id.seekB);
+        btnSave=(Button)findViewById(R.id.btnSave);
 
 
 
