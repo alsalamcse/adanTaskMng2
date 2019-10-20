@@ -36,9 +36,10 @@ public class Singup extends AppCompatActivity {
         password1 = (EditText) findViewById(R.id.password1);
         password2 = (EditText) findViewById(R.id.password2);
         btnsave = (Button) findViewById(R.id.btnsave);
-    }
 
-    private void dataHndler()
+        btnsave.setOnClickListener((v) {dataHandler();});
+    }
+    private void dataHandler()
     {
         boolean isok = true;
         String email = this.email.getText().toString();

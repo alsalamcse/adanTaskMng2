@@ -14,7 +14,7 @@
         android:hint="repassword"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="281dp" />
+        tools:layout_editor_absoluteY="371dp" />
 
     <Button
         android:id="@+id/ButtonIn"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="Singin"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="362dp" />
+        tools:layout_editor_absoluteY="481dp" />
 
     <Button
         android:id="@+id/ButtonUp"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Singup"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="446dp" />
+        tools:layout_editor_absoluteY="576dp" />
 
     <EditText
         android:id="@+id/editEmail"
@@ -40,7 +40,7 @@
         android:hint="email"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="81dp" />
+        tools:layout_editor_absoluteY="169dp" />
 
     <EditText
         android:id="@+id/editPassword"
@@ -50,5 +50,5 @@
         android:hint="password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_editor_absoluteY="265dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

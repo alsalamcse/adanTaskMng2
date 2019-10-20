@@ -63,7 +63,8 @@ public class addTask extends AppCompatActivity {
        public void creatTask(MyTask t)
        {
            FirebaseDatabase database=FirebaseDatabase.getInstance();
-           DatabaseReference reference =database.getReference();
+           DatabaseReference reference =
+                   database.getReference();
            String key = reference.child("tasks").push().getKey();
            reference.child("task").child(key).setValue(t).addOnCompleteListener(this, new OnCompleteListener<Void>() {
                @Override

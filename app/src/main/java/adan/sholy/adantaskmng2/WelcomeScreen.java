@@ -23,7 +23,7 @@ public class WelcomeScreen extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     } else {
-                        Intent i = new Intent(getApplication(),MainTasksActivity.class);
+                        Intent i = new Intent(getApplication(),MainTasksActivity .class);
                         startActivity(i);
                         finish();
                     }
