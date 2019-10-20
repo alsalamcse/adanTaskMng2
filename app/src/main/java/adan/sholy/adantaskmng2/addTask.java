@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -65,8 +66,11 @@ public class addTask extends AppCompatActivity {
            FirebaseDatabase database=FirebaseDatabase.getInstance();
            DatabaseReference reference =
                    database.getReference();
+           FirebaseAuth auth=FirebaseAuth.getInstance();
+           String uid=auth.getCurrentUser().getUid();
+
            String key = reference.child("tasks").push().getKey();
-           reference.child("task").child(key).setValue(t).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+           reference.child("task").child(uid).child(key).setValue(t).addOnCompleteListener(this, new OnCompleteListener<Void>() {
                @Override
                public void onComplete(@NonNull Task<Void> task)
                {
