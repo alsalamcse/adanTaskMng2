@@ -16,6 +16,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import adan.sholy.adantaskmng2.data.MyTask;
+
 public class addTask extends AppCompatActivity {
     private EditText edTitle;
     private EditText edSub ;

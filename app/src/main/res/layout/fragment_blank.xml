@@ -6,7 +6,7 @@
     tools:context=".BlankFragment">
 
     <ListView
-        android:id="@+id/lstvTasks"
+        android:id="@+id/IvTasks"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
