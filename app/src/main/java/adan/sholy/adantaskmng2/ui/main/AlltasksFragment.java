@@ -49,7 +49,6 @@ public class AlltasksFragment extends Fragment {
         IvTasks.setAdapter(taskAdapter);
 
         return view;
-
     }
 
     @Override
