@@ -10,44 +10,65 @@
         android:id="@+id/edTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="148dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="title"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintBottom_toTopOf="@+id/seekB"
+        app:layout_constraintEnd_toEndOf="@+id/seekB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="49dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="subject"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="179dp" />
+        app:layout_constraintBottom_toTopOf="@+id/etpnionity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
 
     <EditText
         android:id="@+id/etpnionity"
-        android:layout_width="65dp"
-        android:layout_height="38dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="420dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="pnionity"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seekB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edSub" />
 
     <SeekBar
         android:id="@+id/seekB"
-        android:layout_width="205dp"
-        android:layout_height="47dp"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="273dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnsave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etpnionity"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
 
     <Button
         android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="285dp"
         android:text="save"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="398dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/seekB"
+        app:layout_constraintTop_toBottomOf="@+id/seekB" />
 </androidx.constraintlayout.widget.ConstraintLayout>
