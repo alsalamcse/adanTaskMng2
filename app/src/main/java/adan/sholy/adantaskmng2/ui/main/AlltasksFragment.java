@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -26,28 +27,44 @@ import adan.sholy.adantaskmng2.data.TasksAdapter;
  * A simple {@link Fragment} subclass.
  */
 public class AlltasksFragment extends Fragment {
+    private TasksAdapter taskAdapter;
+    private ListView IvTasks;
 
 
-    public AlltasksFragment() {
+    public AlltasksFragment()
+    {
         // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        TasksAdapter tasksAdapter = new TasksAdapter(getContext());
+                             Bundle savedInstanceState)
+    {
+        taskAdapter=new TasksAdapter(getContext());
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_alltasks,container,false);
-        IvTasks
-        return inflater.inflate(R.layout.fragment_alltasks, container, false);
+        IvTasks=view.findViewById(R.id.LstvTasks);
+
+        IvTasks.setAdapter(taskAdapter);
+
+        return view;
+
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        readTasksFromFirebase();
+    }
+
     public void readTasksFromFirebase()
     {
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         FirebaseAuth auth=FirebaseAuth.getInstance();
         String uid=auth.getUid();
         DatabaseReference reference=database.getReference();
+        taskAdapter.clear();
         reference.child("tasks").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -56,6 +73,7 @@ public class AlltasksFragment extends Fragment {
                     {
                         MyTask t=d.getValue(MyTask.class);
                         Log.d("MTTASK",t.toString());
+                        taskAdapter.add(t);
                     }
                 }
             }

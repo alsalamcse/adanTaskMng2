@@ -6,7 +6,7 @@
     tools:context=".ui.main.AlltasksFragment">
 
     <ListView
-        android:id="@+id/IvTasks"
+        android:id="@+id/LstvTasks"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
