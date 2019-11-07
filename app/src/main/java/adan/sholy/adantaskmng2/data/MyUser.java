@@ -50,5 +50,18 @@ public class MyUser {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public void setLname(String ){this.lname =lname;}
+
+    @Override
+    public String toString() {
+        return "MyUser{" +
+                "key='" + key + '\'' +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }
+
+
+

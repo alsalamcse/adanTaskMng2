@@ -8,6 +8,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"></application>
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainTasksActivity"
+            android:label="MainTasksActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".TempAllTaskActivity"/>
+            <activity android:name=".settings"/>
+        <activity android:name=".Singup"
+
+
+        <activity android:name=".MainTasksActivity"/>
+        <activity android:name=".Singin"/>
+        <activity android:name=".addTask"/>
+        <activity android:name=".settings"/>
+
+
+        <activity android:name=".WelcomeScreen"><intent-filter>
+
+       <intent-filter>
+           <action android:name="android.intent.action.MAIN">
+           </action>
+           <category android:name="android.intent.category.LAUNCHER">
+
+           </category>
+       </intent-filter>
+
+        </activity>
+
+    </application>
 
 </manifest>
