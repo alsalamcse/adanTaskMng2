@@ -2,6 +2,7 @@ package adan.sholy.adantaskmng2;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,7 +38,12 @@ public class Singup extends AppCompatActivity {
         password2 = (EditText) findViewById(R.id.password2);
         btnsave = (Button) findViewById(R.id.btnsave);
 
-        btnsave.setOnClickListener((v) {dataHandler();});
+        btnsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dataHandler();
+            }
+        });
     }
     private void dataHandler()
     {
