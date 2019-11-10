@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="adan.sholy.adantaskmng2">
 
     <application
@@ -9,33 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainTasksActivity"
-            android:label="MainTasksActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".TempAllTaskActivity"/>
-            <activity android:name=".settings"/>
-        <activity android:name=".Singup"
 
-
-        <activity android:name=".MainTasksActivity"/>
-        <activity android:name=".Singin"/>
-        <activity android:name=".addTask"/>
-        <activity android:name=".settings"/>
-
-
-        <activity android:name=".WelcomeScreen"><intent-filter>
+        <activity android:name=".WelcomeScreen">
 
        <intent-filter>
-           <action android:name="android.intent.action.MAIN">
-           </action>
-           <category android:name="android.intent.category.LAUNCHER">
 
-           </category>
+           <action android:name="android.intent.action.MAIN"/>
+           <category android:name="android.intent.category.LAUNCHER"/>
+
        </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>
