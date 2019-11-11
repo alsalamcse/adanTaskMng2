@@ -39,7 +39,6 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
         chIsCompleted.setChecked(false);
 
 
-
         return Vitem;
     }
 }

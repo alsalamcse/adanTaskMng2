@@ -11,11 +11,10 @@
         android:layout_width="306dp"
         android:layout_height="215dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher"
-         />
+        app:layout_constraintVertical_bias="0.439"
+        app:srcCompat="@mipmap/ic_launcher" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

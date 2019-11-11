@@ -2,6 +2,7 @@ package adan.sholy.adantaskmng2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -29,6 +30,22 @@ public class Singin extends AppCompatActivity {
         editPasswor2=(EditText)findViewById(R.id.editPassord2);
         ButtonIn=(Button) findViewById(R.id.ButtonIn);
         ButtonUp=(Button) findViewById(R.id.ButtonUp);
+
+        ButtonUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Singin.this,Singup.class);
+                startActivity(i);
+            }
+        });
+
+       ButtonIn.setOnClickListener(new View.OnClickListener(){
+
+           @Override
+           public void onClick(View v) {
+               dataHandler();
+           }
+       });
 
     }
     private void dataHandler() {

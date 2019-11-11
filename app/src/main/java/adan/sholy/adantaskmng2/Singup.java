@@ -78,7 +78,8 @@ public class Singup extends AppCompatActivity {
         }
     }
 
-    private void creatAcount(final String email, String password1, String password2, String firstname, String lastname) {
+    private void creatAcount(final String email, String password1, String password2, String firstname, String lastname)
+    {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(email, password1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             private AccessibilityNodeInfo email;
