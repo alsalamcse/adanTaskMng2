@@ -19,6 +19,7 @@
         android:text="title"
         app:layout_constraintBottom_toTopOf="@+id/seekB"
         app:layout_constraintEnd_toEndOf="@+id/seekB"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,7 +27,7 @@
         android:id="@+id/edSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="49dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -65,7 +66,7 @@
         android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="285dp"
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
