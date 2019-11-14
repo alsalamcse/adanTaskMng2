@@ -14,6 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+
 import adan.sholy.adantaskmng2.R;
 
 public class TasksAdapter extends ArrayAdapter<MyTask>
@@ -39,14 +42,26 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
 
         //getting data source
 
-        MyTask myTask=getItem(position);
+        final MyTask myTask=getItem(position);
 
         //todo טיפיל באירוע מחיקה
 
        chIsCompleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+               if (isChecked){
 
+                   //todo delete this item
+                   FirebaseUtils.getReference().child(myTask.getKey()).removeValue(new DatabaseReference.CompletionListener() {
+                       @Override
+                       public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                           if (databaseError==null)
+                           {
+
+                           }
+                       }
+                   });
+               }
            }
        });
 
