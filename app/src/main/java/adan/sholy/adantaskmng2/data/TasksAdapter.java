@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +41,7 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
         CheckBox chIsCompleted=Vitem.findViewById(R.id.itmChbxlsCompleted);
         ImageView ivInfo=Vitem.findViewById(R.id.itmImgInfo);
 
+
         //getting data source
 
         final MyTask myTask=getItem(position);
@@ -49,7 +51,8 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
        chIsCompleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-               if (isChecked){
+               if (isChecked)
+               {
 
                    //todo delete this item
                    FirebaseUtils.getReference().child(myTask.getKey()).removeValue(new DatabaseReference.CompletionListener() {
@@ -57,6 +60,12 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
                        public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                            if (databaseError==null)
                            {
+                               Toast.makeText(getContext(), "deleted", Toast.LENGTH_SHORT).show();
+
+
+                           }
+                           else {
+                               Toast.makeText(getContext(), "not deldted:" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
 
                            }
                        }
